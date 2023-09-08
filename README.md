@@ -6,8 +6,8 @@
 - [ ] Admin forgot password 
 - [ ] Admin system
 - [ ] Auto backup config
-- [ ] dev update
-- [ ] live update
+- [ ] Update dev 
+- [ ] Update live 
 - [ ] Setup installer
 - [ ] Setup uninstaller
 - [ ] Site language
