@@ -1,6 +1,6 @@
 # Ultra Lightweight Streaming Box (ULWSB)
 
-ULWSB is a PHP web control panel that allows users to transform their your single-board computer into a streaming device. With ULWSB, users can send USB capture card video to SRT or RTMP servers.
+ULWSB is a PHP web control panel that allows users to transform their single-board computer into a streaming device. With ULWSB, users can send HDMI from USB capture card to SRT or RTMP servers.
 
 
 
@@ -19,8 +19,8 @@ ULWSB is a PHP web control panel that allows users to transform their your singl
 - [ ] Stream settings
 - [ ] JSON overlays
 - [ ] Watermarks
-
-
+- [ ] Auto text overlays on low bit
+- [ ] Auto start stream on boot
 
 
 ## Requirements:
