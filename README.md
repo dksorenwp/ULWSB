@@ -21,6 +21,8 @@ ULWSB is a PHP web control panel that allows users to transform their your singl
 - [ ] Watermarks
 
 
+
+
 ## Requirements:
 
 Before using ULWSB, ensure you have the following software and versions installed:
@@ -30,11 +32,15 @@ Before using ULWSB, ensure you have the following software and versions installe
 - ffmpeg
 
 
+
+
 **Installation**: Easy, just run this command from your terminal:
 
 ```shell
 curl -sSL https://raw.githubusercontent.com/dksorenwp/ULWSB/main/setup.sh | sh
 ```
+
+
 
 
 ## Getting Started:
@@ -46,6 +52,7 @@ To get started with ULWSB on your single-board computer, follow these steps:
 2. **Configuration**: Configure ULWSB according to your requirements, including setting up admin accounts, stream settings, and more.
 
 3. **Usage**: Start using ULWSB to control your ULWSB streaming device and manage your video streams.
+
 
 ## License:
 
