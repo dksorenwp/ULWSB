@@ -4,7 +4,7 @@ ULWSB is a web control panel build most in PHP, that allows users to transform t
 
 
 
-## Implemented Features:
+## Future Features:
 
 - [ ] Admin forgot password
 - [ ] Admin system
@@ -29,6 +29,11 @@ ULWSB is a web control panel build most in PHP, that allows users to transform t
 - [ ] Notifications pushover
 - [ ] Notifications discord
 - [ ] Log system
+
+## Implemented Features:
+
+None :(
+
 
 ## Requirements:
 
