@@ -9,7 +9,6 @@ ULWSB is a web control panel build most in PHP, that allows users to transform t
 - [ ] Admin forgot password
 - [ ] Admin system
 - [ ] Auto backup config
-- [ ] Update development
 - [ ] Update live
 - [ ] Update dev
 - [ ] Setup installer
