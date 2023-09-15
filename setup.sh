@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Clear the terminal screen
+clear
+
 # Display ASCII banner
 echo -e "\n\n\e[36m _    _ _ __          _______ ____  "
 echo -e "| |  | | |\ \        / / ____|  _ \ "
@@ -59,7 +62,8 @@ PHP_FPM_SOCK="/var/run/php/php${PHP_VERSION}-fpm.sock"
 sudo cp "$NGINX_CONFIG" "$NGINX_CONFIG.backup"
 
 # Update the Nginx configuration
-sudo sed -i "s|fastcgi_pass unix:/var/run/php/php%version%-fpm.sock;|fastcgi_pass unix:$PHP_FPM_SOCK;|g" "$NGINX_CONFIG"
+sudo sed -i "s|fastcgi_pass unix:/var/run/php/php%version%-fpm.sock;|fastcgi_pass $PHP_FPM_SOCK;|g" "$NGINX_CONFIG"
+
 
 # Test Nginx configuration and reload Nginx
 sudo nginx -t
