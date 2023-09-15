@@ -31,7 +31,7 @@ for package in "${packages[@]}"; do
         if [ $? -eq 0 ]; then
             echo -e "\e[32mCompleted: Installed $package\e[0m"
         else
-            echo -e "\e[Failed: Installed $package\e[0m"
+            echo -e "\e[31mFailed: Installed $package\e[0m"
             exit 1
         fi
     fi
