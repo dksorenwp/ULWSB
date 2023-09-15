@@ -23,17 +23,13 @@ fi
 # Install packages
 packages=("nginx" "php-fpm" "ffmpeg" "git")  # Replace "php-fpm" with "php8.2-fpm"
 for package in "${packages[@]}"; do
-    if dpkg -l | grep -q $package; then
-        echo -e "\e[33mWarning: $package is already installed. If you encounter any issues, it is recommended to uninstall it and run this installation again\e[0m"
+    echo -e "\e[32mInstalling $package...\e[0m"
+    sudo apt-get install -y $package
+    if [ $? -eq 0 ]; then
+        echo -e "\e[32mCompleted: Installed $package\e[0m"
     else
-        echo -e "\e[32mInstalling $package...\e[0m"
-        sudo apt-get install -y $package
-        if [ $? -eq 0 ]; then
-            echo -e "\e[32mCompleted: Installed $package\e[0m"
-        else
-            echo -e "\e[31mFailed: Installed $package\e[0m"
-            exit 1
-        fi
+        echo -e "\e[31mFailed: Installed $package\e[0m"
+        exit 1
     fi
 done
 
