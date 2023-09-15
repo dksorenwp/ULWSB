@@ -39,7 +39,7 @@ None :(
 Before using ULWSB, ensure you have the following software and versions installed:
 
 - Nginx 1.22.1+
-- php8.1-fpm 8.1+
+- php-fpm 8.1+
 - ffmpeg
 
 
