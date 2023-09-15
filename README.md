@@ -48,7 +48,7 @@ Before using ULWSB, ensure you have the following software and versions installe
 **Installation**: Easy, just run this command from your terminal:
 
 ```shell
-curl -sSL https://raw.githubusercontent.com/dksorenwp/ULWSB/main/setup.sh | sh
+curl -sSL https://raw.githubusercontent.com/dksorenwp/ULWSB/main/setup.sh | bash
 ```
 
 
