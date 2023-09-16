@@ -24,7 +24,7 @@ else
 fi
 
 # Install packages
-packages=("nginx" "php-fpm" "ffmpeg" "git" "screen" )  # Replace "php-fpm" with "php8.2-fpm"
+packages=("nginx" "php-fpm" "php-curl" "ffmpeg" "git" "screen" ) 
 for package in "${packages[@]}"; do
     echo -e "\e[32mInstalling $package...\e[0m"
     sudo apt-get install -y $package

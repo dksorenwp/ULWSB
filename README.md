@@ -7,7 +7,6 @@ ULWSB is a web control panel build most in PHP, that allows users to transform t
 ## Future Features:
 
 - [ ] Admin forgot password
-- [ ] Admin system
 - [ ] Auto backup config
 - [ ] Update live
 - [ ] Update dev
@@ -25,13 +24,12 @@ ULWSB is a web control panel build most in PHP, that allows users to transform t
 - [ ] Webhook/webSocket trigger by statement
 - [ ] Webhook/webSocket trigger by button
 - [ ] Cron jobs
-- [ ] Notifications pushover
-- [ ] Notifications discord
-- [ ] Log system
+- [ ] Log system, Notifications pushover
+- [ ] Blacklist IP if to many fail login
 
 ## Implemented Features:
 
-None :(
+- [X] Log system with action, warning and error log local and notifications on discord as simple embeds chat
 
 
 ## Requirements:
@@ -39,9 +37,11 @@ None :(
 Before using ULWSB, ensure you have the following software and versions installed:
 
 - Nginx 1.22.1+
-- php-fpm 8.1+
 - ffmpeg
 - screen
+- php-fpm 8.1+
+- php-curl
+
 
 
 

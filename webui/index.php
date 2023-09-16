@@ -1,3 +1,9 @@
-<?php 
+<?php
+include_once('core.php');
 
-echo "working!";
+
+
+echo "test";
+
+?>
+
