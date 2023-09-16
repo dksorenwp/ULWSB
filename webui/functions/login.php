@@ -1,6 +1,7 @@
 <?php
 function login() {
-    $config = require(dirname(__FILE__, 2) . '/config/config.php');
+	require_once(dirname(__FILE__, 2) . '/functions/systemLog.php');
+    $config = json_decode(file_get_contents(dirname(__FILE__, 2) . '/config/config.json'), true);
 
 if (isset($_POST['password'])) {
     if (password_verify($_POST['password'], $config['webuiPassword'])) {

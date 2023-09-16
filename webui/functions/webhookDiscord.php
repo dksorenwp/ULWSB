@@ -1,7 +1,7 @@
 <?php
 function webhookDiscord($type, $message) {
     if (!empty($message)) {
-        $config = require(dirname(__FILE__, 2) . '/config/config.php');
+        $config = json_decode(file_get_contents(dirname(__FILE__, 2) . '/config/config.json'), true);
         if (!empty($config['log']['webhook']['discord']['url'])) {
             if ($config['log']['webhook']['discord']['embeds']) {
                 // Use embeds

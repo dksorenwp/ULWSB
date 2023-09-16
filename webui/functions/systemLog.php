@@ -5,12 +5,7 @@ function systemLog($type, $message) {
 $type = ucfirst($type);
 $message = ucfirst($message);
 
-
-    $config = require(dirname(__FILE__, 2) . '/config/config.php');
-
-
-
-
+    $config = json_decode(file_get_contents(dirname(__FILE__, 2) . '/config/config.json'), true);
 
     if (isset($message)) {
 	if ($config['log']['level'][strtolower($type)] == 1) {

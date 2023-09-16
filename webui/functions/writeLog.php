@@ -1,7 +1,7 @@
 <?php
 function writeLog($type, $message) {
     if (!empty($message)) {
-        $config = require(dirname(__FILE__, 2) . '/config/config.php');
+        $config = json_decode(file_get_contents(dirname(__FILE__, 2) . '/config/config.json'), true);
         if (!empty($config['log']['localDIR'])) {
             // Define the path to your log directory
             $logDir = $config['log']['localDIR'];

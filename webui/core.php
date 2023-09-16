@@ -3,13 +3,14 @@
 session_start();
 
 // Include the configuration file
-$config = require(dirname(__FILE__, 1) . '/config/config.php');
+$config = json_decode(file_get_contents(dirname(__FILE__, 1) . '/config/config.json'), true);
 
 // Include necessary functions
-require_once('functions/login.php');
-require_once('functions/logout.php');
-require_once('functions/loginPage.php');
-
+require_once(dirname(__FILE__, 1) . '/functions/login.php');
+require_once(dirname(__FILE__, 1) . '/functions/logout.php');
+require_once(dirname(__FILE__, 1) . '/functions/loginPage.php');
+require_once(dirname(__FILE__, 1) . '/functions/systemLog.php');
+	
 // Check if the user is not logged in
 if (!login()) {
     // If the user is not logged in and no session is active, show the login page
@@ -25,3 +26,5 @@ if (isset($_GET['logout'])) {
     logout();
 }
 ?>
+
+
