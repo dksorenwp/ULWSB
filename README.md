@@ -8,8 +8,8 @@ ULWSB is a web control panel build most in PHP, that allows users to transform t
 
 - [ ] Admin forgot password
 - [ ] Auto backup config
-- [ ] Update live
-- [ ] Update dev
+- [ ] Auto update live
+- [ ] Auto update dev
 - [ ] Setup installer
 - [ ] Setup uninstaller
 - [ ] Site language
