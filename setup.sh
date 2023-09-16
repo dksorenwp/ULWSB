@@ -3,8 +3,11 @@
 # Clear the terminal screen
 clear
 
+# Remove the default Nginx welcome page
+sudo rm /var/www/html/index.nginx-debian.html
+
 # Display ASCII banner
-echo -e "\n\n\e[36m _    _ _ __          _______ ____  "
+echo -e "\e[36m _    _ _ __          _______ ____  "
 echo -e "| |  | | |\ \        / / ____|  _ \ "
 echo -e "| |  | | | \ \  /\  / / (___ | |_) |"
 echo -e "| |  | | |  \ \/  \/ / \___ \|  _ < "
@@ -61,9 +64,27 @@ PHP_FPM_SOCK="/var/run/php/php${PHP_VERSION}-fpm.sock"
 # Backup the original Nginx configuration file
 sudo cp "$NGINX_CONFIG" "$NGINX_CONFIG.backup"
 
-# Update the Nginx configuration
-sudo sed -i "s|fastcgi_pass unix:/var/run/php/php%version%-fpm.sock;|fastcgi_pass $PHP_FPM_SOCK;|g" "$NGINX_CONFIG"
+# Create a new Nginx configuration file
+sudo tee "$NGINX_CONFIG" > /dev/null <<EOL
+server {
+        listen 80 default_server;
 
+        root /var/www/html/ULWSB;
+
+        index index.php;
+
+        server_name _;
+
+        location / {
+                try_files \$uri \$uri/ =404;
+        }
+
+        location ~ \.php$ {
+                include snippets/fastcgi-php.conf;
+                fastcgi_pass unix:$PHP_FPM_SOCK;
+        }
+}
+EOL
 
 # Test Nginx configuration and reload Nginx
 sudo nginx -t
