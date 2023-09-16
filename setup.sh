@@ -3,9 +3,6 @@
 # Clear the terminal screen
 clear
 
-# Remove the default Nginx welcome page
-sudo rm /var/www/html/index.nginx-debian.html
-
 # Display ASCII banner
 echo -e "\e[36m _    _ _ __          _______ ____  "
 echo -e "| |  | | |\ \        / / ____|  _ \ "
@@ -27,7 +24,7 @@ else
 fi
 
 # Install packages
-packages=("nginx" "php-fpm" "ffmpeg" "git")  # Replace "php-fpm" with "php8.2-fpm"
+packages=("nginx" "php-fpm" "ffmpeg" "git" "screen" )  # Replace "php-fpm" with "php8.2-fpm"
 for package in "${packages[@]}"; do
     echo -e "\e[32mInstalling $package...\e[0m"
     sudo apt-get install -y $package
