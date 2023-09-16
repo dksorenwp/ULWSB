@@ -28,8 +28,8 @@ ULWSB is a web control panel build most in PHP, that allows users to transform t
 - [ ] Blacklist IP if to many fail login
 
 ## Implemented Features:
-
-- [X] Log system with action, warning and error log local and notifications on discord as simple embeds chat
+- [X] Login with encrypted password
+- [X] Log with action, warning and error log local and notifications on discord as simple embeds chat
 
 
 ## Requirements:
