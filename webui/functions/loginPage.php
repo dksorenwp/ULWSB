@@ -17,4 +17,3 @@ function loginPage() {
     </html>
     HTML;
 }
-?>

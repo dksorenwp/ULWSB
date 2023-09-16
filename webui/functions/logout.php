@@ -6,4 +6,3 @@ function logout() {
     header("Location: index.php"); // Redirect to index.php
     exit();
 }
-?>
